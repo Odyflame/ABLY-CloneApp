@@ -1,10 +1,31 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+def basicFrameworks
+  
+  pod 'Moya/RxSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+end
+
+target 'Network' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Network
+  basicFrameworks
+end
+
 target 'ABLY' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for ABLY
+  basicFrameworks
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Then'
+  pod 'SDWebImage'
+  
 
 end
