@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		187EACC4267C2CF500243CB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACC3267C2CF500243CB8 /* AppDelegate.swift */; };
-		187EACC6267C2CF500243CB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACC5267C2CF500243CB8 /* SceneDelegate.swift */; };
 		187EACC8267C2CF500243CB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACC7267C2CF500243CB8 /* ViewController.swift */; };
-		187EACCB267C2CF500243CB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187EACC9267C2CF500243CB8 /* Main.storyboard */; };
 		187EACCD267C2CF700243CB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187EACCC267C2CF700243CB8 /* Assets.xcassets */; };
 		187EACD0267C2CF700243CB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187EACCE267C2CF700243CB8 /* LaunchScreen.storyboard */; };
 		187EACE0267C2F4F00243CB8 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 187EACDE267C2F4F00243CB8 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		187EACE3267C2F4F00243CB8 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187EACDC267C2F4F00243CB8 /* Network.framework */; };
 		187EACE4267C2F4F00243CB8 /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187EACDC267C2F4F00243CB8 /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		187EACEC267C3A8F00243CB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACEB267C3A8F00243CB8 /* HomeViewController.swift */; };
+		187EACF2267C3C4400243CB8 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACF1267C3C4400243CB8 /* BaseURL.swift */; };
+		187EACF4267C3C5900243CB8 /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACF3267C3C5900243CB8 /* BaseManager.swift */; };
+		187EACF6267C3CCE00243CB8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACF5267C3CCE00243CB8 /* Home.swift */; };
+		187EACF8267C3E5800243CB8 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACF7267C3E5800243CB8 /* HomeService.swift */; };
+		187EACFA267C3E6100243CB8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACF9267C3E6100243CB8 /* HomeController.swift */; };
+		187EACFD267C51E500243CB8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EACFC267C51E500243CB8 /* HomeViewModel.swift */; };
 		8A00C580A25099522195DFAB /* Pods_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1D325DBBEC8845499D719F /* Pods_Network.framework */; };
 		CDD7B1B433251AA47F9B7064 /* Pods_ABLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98EED0AEE67669589D178CC /* Pods_ABLY.framework */; };
 /* End PBXBuildFile section */
@@ -47,15 +52,20 @@
 /* Begin PBXFileReference section */
 		187EACC0267C2CF500243CB8 /* ABLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187EACC3267C2CF500243CB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		187EACC5267C2CF500243CB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		187EACC7267C2CF500243CB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		187EACCA267C2CF500243CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		187EACCC267C2CF700243CB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187EACCF267C2CF700243CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		187EACD1267C2CF700243CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187EACDC267C2F4F00243CB8 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		187EACDE267C2F4F00243CB8 /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
 		187EACDF267C2F4F00243CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187EACEB267C3A8F00243CB8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		187EACF1267C3C4400243CB8 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		187EACF3267C3C5900243CB8 /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		187EACF5267C3CCE00243CB8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		187EACF7267C3E5800243CB8 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		187EACF9267C3E6100243CB8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		187EACFC267C51E500243CB8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2F55E21FFC16828FBDC5D68B /* Pods-Network.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.debug.xcconfig"; path = "Target Support Files/Pods-Network/Pods-Network.debug.xcconfig"; sourceTree = "<group>"; };
 		45A96660FD5B05153C9DDA1A /* Pods-Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.release.xcconfig"; path = "Target Support Files/Pods-Network/Pods-Network.release.xcconfig"; sourceTree = "<group>"; };
 		914A1CC77CECDF8D41C51FED /* Pods-ABLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABLY.release.xcconfig"; path = "Target Support Files/Pods-ABLY/Pods-ABLY.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,10 +118,10 @@
 		187EACC2267C2CF500243CB8 /* ABLY */ = {
 			isa = PBXGroup;
 			children = (
+				187EACEA267C3A7900243CB8 /* Favorite */,
+				187EACE9267C3A6200243CB8 /* Home */,
 				187EACC3267C2CF500243CB8 /* AppDelegate.swift */,
-				187EACC5267C2CF500243CB8 /* SceneDelegate.swift */,
 				187EACC7267C2CF500243CB8 /* ViewController.swift */,
-				187EACC9267C2CF500243CB8 /* Main.storyboard */,
 				187EACCC267C2CF700243CB8 /* Assets.xcassets */,
 				187EACCE267C2CF700243CB8 /* LaunchScreen.storyboard */,
 				187EACD1267C2CF700243CB8 /* Info.plist */,
@@ -122,10 +132,71 @@
 		187EACDD267C2F4F00243CB8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				187EACF0267C3C3800243CB8 /* Base */,
+				187EACEF267C3C3300243CB8 /* Controller */,
+				187EACEE267C3BF400243CB8 /* Service */,
+				187EACED267C3BF000243CB8 /* Model */,
 				187EACDE267C2F4F00243CB8 /* Network.h */,
 				187EACDF267C2F4F00243CB8 /* Info.plist */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		187EACE9267C3A6200243CB8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				187EACFB267C51DC00243CB8 /* ViewModel */,
+				187EACEB267C3A8F00243CB8 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		187EACEA267C3A7900243CB8 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		187EACED267C3BF000243CB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187EACF5267C3CCE00243CB8 /* Home.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187EACEE267C3BF400243CB8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				187EACF7267C3E5800243CB8 /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		187EACEF267C3C3300243CB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				187EACF9267C3E6100243CB8 /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		187EACF0267C3C3800243CB8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				187EACF1267C3C4400243CB8 /* BaseURL.swift */,
+				187EACF3267C3C5900243CB8 /* BaseManager.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		187EACFB267C51DC00243CB8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				187EACFC267C51E500243CB8 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3699A7AD20338E4282DD27CB /* Pods */ = {
@@ -216,6 +287,7 @@
 					};
 					187EACDB267C2F4F00243CB8 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -245,7 +317,6 @@
 			files = (
 				187EACD0267C2CF700243CB8 /* LaunchScreen.storyboard in Resources */,
 				187EACCD267C2CF700243CB8 /* Assets.xcassets in Resources */,
-				187EACCB267C2CF500243CB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +400,8 @@
 			files = (
 				187EACC8267C2CF500243CB8 /* ViewController.swift in Sources */,
 				187EACC4267C2CF500243CB8 /* AppDelegate.swift in Sources */,
-				187EACC6267C2CF500243CB8 /* SceneDelegate.swift in Sources */,
+				187EACEC267C3A8F00243CB8 /* HomeViewController.swift in Sources */,
+				187EACFD267C51E500243CB8 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187EACF4267C3C5900243CB8 /* BaseManager.swift in Sources */,
+				187EACF6267C3CCE00243CB8 /* Home.swift in Sources */,
+				187EACF8267C3E5800243CB8 /* HomeService.swift in Sources */,
+				187EACF2267C3C4400243CB8 /* BaseURL.swift in Sources */,
+				187EACFA267C3E6100243CB8 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,14 +428,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		187EACC9267C2CF500243CB8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				187EACCA267C2CF500243CB8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		187EACCE267C2CF700243CB8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -490,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBC22762C0BCE16A75902653 /* Pods-ABLY.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 914A1CC77CECDF8D41C51FED /* Pods-ABLY.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F55E21FFC16828FBDC5D68B /* Pods-Network.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -547,6 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = odyflame.Network;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -558,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45A96660FD5B05153C9DDA1A /* Pods-Network.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
