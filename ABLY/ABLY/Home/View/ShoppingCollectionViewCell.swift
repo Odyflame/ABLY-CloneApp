@@ -64,7 +64,7 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
         $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
         $0.text = Constant.goodsNameLabel
         $0.numberOfLines = 0
-        $0.textColor = .black
+        $0.textColor = Color.gray
     }
     
     lazy var sellingStackView = UIStackView(arrangedSubviews: [newKeywordImage, sellingCountLabel]).then {
@@ -80,7 +80,7 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     lazy var sellingCountLabel = UILabel().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 13)
         $0.text = Constant.sellingCountLabel
-        $0.textColor = .black
+        $0.textColor = Color.gray
     }
     
     let disposeBag = DisposeBag()
@@ -117,8 +117,16 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     func configure(data: GoodsResult) {
         
         self.data = data
-        priceLabel.text = "\(data.price ?? 0)"
-        
+        if let price = data.price {
+            let currencyFormatter = NumberFormatter()
+            currencyFormatter.usesGroupingSeparator = true
+            currencyFormatter.numberStyle = .currency
+            currencyFormatter.locale = Locale.current
+
+            let num = NSNumber(value: Int32(price))
+            let priceString = currencyFormatter.string(from: num)
+            priceLabel.text = priceString
+        }
         goodsNameLabel.text = "\(data.name ?? "")"
         
         GoodsManager.shared.fetch(id: data.id) { good in
