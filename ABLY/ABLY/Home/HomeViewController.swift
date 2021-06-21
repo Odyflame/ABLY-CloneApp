@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     
     enum Constant {
         static let title = "홈"
+        static let bannerHeight = 263
     }
     
     lazy var bannerHeaderCollectionViewController = BannerHeaderView()
@@ -104,7 +105,7 @@ class HomeViewController: UIViewController {
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.height.equalTo(263)
+            make.height.equalTo(Constant.bannerHeight)
         }
         
         homeShoppingCollectionViewController.snp.makeConstraints { make in

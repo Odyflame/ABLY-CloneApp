@@ -51,8 +51,6 @@ public class HomeViewModel: HomeViewModelType, HomeViewModelOutput, HomeViewMode
                     return
                 }
                 
-                self.goods.accept([])
-                self.banners.accept([])
                 self.goods.accept(element.goods)
                 self.banners.accept(element.banners ?? [])
                 
