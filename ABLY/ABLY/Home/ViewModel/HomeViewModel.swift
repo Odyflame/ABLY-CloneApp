@@ -48,7 +48,6 @@ public class HomeViewModel: HomeViewModelType, HomeViewModelOutput, HomeViewMode
                 
                 guard let self = self,
                       let element = result.element else {
-                    print("하하 안되넹")
                     return
                 }
                 
@@ -69,7 +68,6 @@ public class HomeViewModel: HomeViewModelType, HomeViewModelOutput, HomeViewMode
                 guard let self = self,
                       let element = result.element,
                       !element.goods.isEmpty else {
-                    print("하하 왜안되지?")
                     return
                 }
                 

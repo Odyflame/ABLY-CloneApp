@@ -78,9 +78,7 @@ public class GoodsManager {
     
     public func delete(good: GoodsResult, completion: (() -> Void)? = nil) {
         CoreDataManager.sharedManager.performBackgroundTask { (context) in
-            print("오잉")
             guard let id = good.id else { return }
-            print("하하 이거참")
             CoreDataManager.sharedManager.delete(id: id, context: context)
             guard let completion = completion else {
                 return

@@ -144,7 +144,6 @@ extension HomeViewController {
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.height
         
-        // 스크롤이 테이블 뷰 Offset의 끝에 가게 되면 다음 페이지를 호출
         if offsetY > (contentHeight - height) && !isPaging {
             isPaging = true
             guard let id = self.goods.last?.id else { return }

@@ -44,7 +44,7 @@ class BannerCollectionViewCell: UICollectionViewCell {
             return
         }
         
-        self.bannerImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "spareImage"))
+        self.bannerImageView.sd_setImage(with: url, placeholderImage: UIImage(named: Constant.spageImage))
     }
 }
 
