@@ -139,14 +139,10 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
         
         if let isNew = data.isNew, isNew {
             newKeywordImage.image = UIImage(named: "imgBadgeNew")
-        } else {
-            newKeywordImage.image = nil
         }
         
         if let sellCount = data.sellCount, sellCount >= 10 {
             sellingCountLabel.text = "\(sellCount)개 구매중"
-        } else {
-            sellingCountLabel.text?.removeAll()
         }
         
         if let price = data.price,
