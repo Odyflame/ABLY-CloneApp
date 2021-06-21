@@ -12,8 +12,12 @@ import Then
 class BannerCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: BannerCollectionViewCell.self)
     
+    enum Constant {
+        static let spageImage = "spareImage"
+    }
+    
     lazy var bannerImageView = UIImageView().then {
-        $0.image = UIImage(named: "spareImage")
+        $0.image = UIImage(named: Constant.spageImage)
         $0.contentMode = .scaleAspectFit
     }
     

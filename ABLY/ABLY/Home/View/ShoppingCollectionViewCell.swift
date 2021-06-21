@@ -17,6 +17,13 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     
     static let reuseIdentifier = String(describing: ShoppingCollectionViewCell.self)
     
+    enum Constant {
+        static let disCountLabel = "0%"
+        static let priceLabel = "0"
+        static let goodsNameLabel = "준비중입니다"
+        static let sellingCountLabel = "구매 수량 확인중"
+    }
+    
     lazy var goodsImage = UIImageView().then {
         $0.image = UIImage(named: "spareImage")
     }
@@ -45,17 +52,17 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     lazy var discountLabel = UILabel().then {
         $0.textColor = .red
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 18)
-        $0.text = "0%"
+        $0.text = Constant.disCountLabel
     }
     lazy var priceLabel = UILabel().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 18)
-        $0.text = "0"
+        $0.text = Constant.priceLabel
         $0.textColor = .black
     }
     
     lazy var goodsNameLabel = UILabel().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
-        $0.text = "준비중입니다"
+        $0.text = Constant.goodsNameLabel
         $0.numberOfLines = 0
         $0.textColor = .black
     }
@@ -72,7 +79,7 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     
     lazy var sellingCountLabel = UILabel().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 13)
-        $0.text = "1232 구매중"
+        $0.text = Constant.sellingCountLabel
         $0.textColor = .black
     }
     
