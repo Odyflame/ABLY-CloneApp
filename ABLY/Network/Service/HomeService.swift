@@ -40,7 +40,7 @@ extension HomeService: TargetType {
     var task: Task {
         switch self {
         case .getBannerAndShoppingData: return .requestPlain
-        case .getNextShoppingData(let id): return .requestParameters(parameters: ["lastid": id], encoding: URLEncoding.default)
+        case .getNextShoppingData(let id): return .requestParameters(parameters: ["lastId": id], encoding: URLEncoding.default)
         }
     }
     

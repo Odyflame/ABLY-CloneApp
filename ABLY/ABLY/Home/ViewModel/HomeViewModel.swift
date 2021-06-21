@@ -12,7 +12,7 @@ import RxCocoa
 
 protocol HomeViewModelInput {
     func getBannerAndShoppingData()
-    func getNextShoppingData()
+    func getNextShoppingData(id: Int)
 }
 
 protocol HomeViewModelOutput {
@@ -45,14 +45,17 @@ public class HomeViewModel: HomeViewModelType, HomeViewModelOutput, HomeViewMode
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
             .subscribe { [weak self] result in
+                
                 guard let self = self,
                       let element = result.element else {
                     print("하하 안되넹")
                     return
                 }
                 
+                self.goods.accept([])
+                self.banners.accept([])
                 self.goods.accept(element.goods)
-                self.banners.accept(element.banners)
+                self.banners.accept(element.banners ?? [])
                 
             }.disposed(by: disposeBag)
     }
@@ -62,13 +65,15 @@ public class HomeViewModel: HomeViewModelType, HomeViewModelOutput, HomeViewMode
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
             .subscribe { [weak self] result in
+                
                 guard let self = self,
-                      let element = result.element else {
-                    print("하하 안되넹")
+                      let element = result.element,
+                      !element.goods.isEmpty else {
+                    print("하하 왜안되지?")
                     return
                 }
                 
-                
+                self.goods.accept(self.goods.value + element.goods)
                 
             }.disposed(by: disposeBag)
     }

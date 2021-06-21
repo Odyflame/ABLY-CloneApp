@@ -8,5 +8,5 @@
 import Foundation
 
 enum BaseURL: String {
-    case base = "http://d2bab9i9pr8lds.cloudfront.net/api"
+    case base = "https://d2bab9i9pr8lds.cloudfront.net/api"
 }

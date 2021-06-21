@@ -17,6 +17,15 @@ target 'Network' do
   basicFrameworks
 end
 
+target 'DesignHelper' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for DesignHelper
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Then'
+end
+
 target 'ABLY' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -26,6 +35,4 @@ target 'ABLY' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Then'
   pod 'SDWebImage'
-  
-
 end

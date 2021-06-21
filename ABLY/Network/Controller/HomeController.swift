@@ -20,10 +20,10 @@ public class HomeController {
             .asObservable()
     }
     
-    public func getNextShoppingData(id: Int) -> Observable<GoodsResult> {
+    public func getNextShoppingData(id: Int) -> Observable<HomeResult> {
         serviceManager.provider.rx
             .request(HomeService.getNextShoppingData(id: id))
-            .map(GoodsResult.self)
+            .map(HomeResult.self)
             .asObservable()
     }
 }

@@ -1,0 +1,6 @@
+framework module Pods_DesignHelper {
+  umbrella header "Pods-DesignHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

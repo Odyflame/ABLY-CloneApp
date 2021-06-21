@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
-        let navigationController = UINavigationController(rootViewController: HomeViewController())
+        UINavigationBar.appearance().barTintColor = .white
+        UITabBar.appearance().barTintColor = .white
+        
+        let mainVC = MainViewController()
+        let navigationController = UINavigationController(rootViewController: mainVC)
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
@@ -27,6 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         
     }
-
+    
 }
 

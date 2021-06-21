@@ -8,7 +8,7 @@
 import Foundation
 
 public struct HomeResult: Codable {
-    public var banners: [BannerResult]
+    public var banners: [BannerResult]?
     public var goods: [GoodsResult]
 }
 
@@ -31,5 +31,21 @@ public struct GoodsResult: Codable {
         case isNew = "is_new"
         case sellCount = "sell_count"
         case actualPrice = "actual_price"
+    }
+    
+    public init(id: Int?,
+                 name: String?,
+                 image: String?,
+                 isNew: Bool?,
+                 sellCount: Int?,
+                 actualPrice: Int?,
+                 price: Int?) {
+        self.id = id
+        self.name = name
+        self.image = image
+        self.isNew = isNew
+        self.sellCount = sellCount
+        self.actualPrice = actualPrice
+        self.price = price
     }
 }
