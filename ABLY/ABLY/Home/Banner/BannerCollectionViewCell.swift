@@ -18,7 +18,7 @@ class BannerCollectionViewCell: UICollectionViewCell {
     
     lazy var bannerImageView = UIImageView().then {
         $0.image = UIImage(named: Constant.spageImage)
-        $0.contentMode = .scaleAspectFit
+        $0.contentMode = .scaleAspectFill
     }
     
     override init(frame: CGRect) {

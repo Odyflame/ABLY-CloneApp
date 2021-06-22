@@ -12,14 +12,15 @@ import RxCocoa
 import DesignHelper
 import Network
 
-class BannerHeaderView: UIView {
+class BannerHeaderView: UICollectionReusableView {
     
+    static let reuseIdentifier = "BannerHeaderView"
     var links: [BannerResult] = []
     private var timer = Timer()
     let timerInterval: TimeInterval = 3.0
     
     override init(frame: CGRect) {
-        super.init(frame: .zero)
+        super.init(frame: frame)
         startTimer()
         configureLayout()
     }
@@ -79,6 +80,9 @@ class BannerHeaderView: UIView {
         timer.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true, block: { timer in
           
+            guard self.collectionView.bounds.width > 0 else {
+                return
+            }
             let index = Int(self.collectionView.contentOffset.x / self.collectionView.bounds.width)
             var nextIndex = index + 1
 

@@ -32,6 +32,10 @@ class HomeViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.contentInsetAdjustmentBehavior = .always
         
+        collectionView.register(BannerHeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: BannerHeaderView.reuseIdentifier)
+        
         collectionView.register(
             ShoppingCollectionViewCell.self,
             forCellWithReuseIdentifier: ShoppingCollectionViewCell.reuseIdentifier
@@ -80,7 +84,7 @@ class HomeViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.bannerHeaderCollectionViewController.configure(list: list)
                 }
-
+                
             }).disposed(by: disposeBag)
         
         viewModel.output.goods
@@ -98,21 +102,21 @@ class HomeViewController: UIViewController {
     }
     
     func configureLayout() {
-        view.addSubview(bannerHeaderCollectionViewController)
+        //        view.addSubview(bannerHeaderCollectionViewController)
         view.addSubview(homeShoppingCollectionViewController)
         
-        bannerHeaderCollectionViewController.snp.makeConstraints { make in
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.height.equalTo(Constant.bannerHeight)
-        }
+        //        bannerHeaderCollectionViewController.snp.makeConstraints { make in
+        //            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
+        //            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
+        //            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+        //            make.height.equalTo(Constant.bannerHeight)
+        //        }
         
         homeShoppingCollectionViewController.snp.makeConstraints { make in
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-            make.top.equalTo(bannerHeaderCollectionViewController.snp.bottom)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
     }
     
@@ -136,6 +140,31 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.configure(data: goods[indexPath.item])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        guard let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: BannerHeaderView.reuseIdentifier,
+                for: indexPath ) as? BannerHeaderView else {
+            return UICollectionReusableView()
+        }
+        
+        header.configure(list: self.viewModel.output.banners.value)
+        
+        return header
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width,
+                      height: collectionView.frame.height/3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
     }
 }
 
