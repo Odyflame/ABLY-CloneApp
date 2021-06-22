@@ -40,6 +40,9 @@ App Icon 설정
 Cor Data 설정
 * 좋아요 탭에는 로컬에서 좋아요한 목록 표시
 
+Banner View 자동 스크롤
+* 3초 간격으로 자동 스크롤 설정
+
 ## 📸 App ScreenShot
 
 |![Main](https://user-images.githubusercontent.com/44191131/122766951-13662a00-d2dd-11eb-91bd-90f7a11fec92.PNG) | ![Coupon](https://user-images.githubusercontent.com/44191131/122766961-16f9b100-d2dd-11eb-9c0f-4889543e9968.PNG) 
