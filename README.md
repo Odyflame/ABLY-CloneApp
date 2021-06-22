@@ -35,6 +35,8 @@ pod install
 ## 📦 Added Func List
 App Icon 설정
 * Figma에 없는 app icon 설정
+Cor Data 설정
+* 좋아요 탭에는 로컬에서 좋아요한 목록 표시
 
 ## 📸 App ScreenShot
 
