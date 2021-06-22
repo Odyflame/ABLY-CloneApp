@@ -13,8 +13,6 @@ This is ABLY Clone App
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/Odyflame/ABLY-CloneApp)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-</div>
-
 ### 라이브러리
 
 | 라이브러리(Library)    | 목적(Purpose)             | 버전(VersionA                                                 |
@@ -26,6 +24,8 @@ This is ABLY Clone App
 | RxSwift             | Reactive programming     | ![lottie-ios](https://img.shields.io/badge/RxSwift-5.1.2-green) |
 | RxCocoa             | Reactive programming     | ![lottie-ios](https://img.shields.io/badge/RxCocoa-5.1.1-skyblue) |
 
+</div>
+  
 ## install
 
 ```
