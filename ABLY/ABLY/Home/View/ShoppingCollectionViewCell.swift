@@ -75,6 +75,7 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     
     lazy var newKeywordImage = UIImageView().then {
         $0.image = UIImage(named: "imgBadgeNew")
+        $0.layer.cornerRadius = 10
     }
     
     lazy var sellingCountLabel = UILabel().then {
