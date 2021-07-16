@@ -12,6 +12,8 @@ import Network
 class CoreDataManager: NSObject {
     static let sharedManager = CoreDataManager()
     
+    private override init() { }
+    
     enum Constant {
         static let modelName = "Goods"
     }

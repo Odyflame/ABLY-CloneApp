@@ -13,6 +13,8 @@ public class GoodsManager {
     
     var goods: [Goods]?
     
+    private init() { }
+    
     func insert(good: GoodsResult, completion: (() -> Void)? = nil) {
         CoreDataManager.sharedManager.performBackgroundTask { (context) in
             CoreDataManager.sharedManager.insert(goods: good, context: context)
