@@ -26,6 +26,8 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     
     lazy var goodsImage = UIImageView().then {
         $0.image = UIImage(named: "spareImage")
+        $0.layer.cornerRadius = 20
+        $0.layer.masksToBounds = true
     }
     
     lazy var heartButton = UIButton().then {
@@ -75,7 +77,6 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     
     lazy var newKeywordImage = UIImageView().then {
         $0.image = UIImage(named: "imgBadgeNew")
-        $0.layer.cornerRadius = 10
     }
     
     lazy var sellingCountLabel = UILabel().then {
@@ -149,6 +150,11 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
         if let price = data.price,
               let actualPrice = data.actualPrice {
             let percent = Double(actualPrice - price) / Double(actualPrice) * 100
+            let per = Int(percent)
+            guard per == 0 else {
+                discountLabel.text = nil
+                return
+            }
             discountLabel.text = "\(Int(percent))%"
         }
         
