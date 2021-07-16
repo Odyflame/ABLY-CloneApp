@@ -151,8 +151,9 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
               let actualPrice = data.actualPrice {
             let percent = Double(actualPrice - price) / Double(actualPrice) * 100
             let per = Int(percent)
-            guard per == 0 else {
-                discountLabel.text = nil
+            
+            guard per != 0 else {
+                discountLabel.isHidden = true
                 return
             }
             discountLabel.text = "\(Int(percent))%"
@@ -160,6 +161,7 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
         
         guard let link = data.image,
               let imageURL = URL(string: link) else {
+            goodsImage.image = UIImage(named: "spareImage")
             return
         }
         
